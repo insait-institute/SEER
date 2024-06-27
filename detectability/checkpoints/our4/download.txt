@@ -1,0 +1,2 @@
+Models' size exceeds submission form size limit.
+Please download model files from https://mega.nz/file/Qh1EDJpC#nnOM_MYfn4SvMf9HX1vxl_JTvz27DOGoNzHuyNtpx68 and move to the `detectability/checkpoints/our4` directory.

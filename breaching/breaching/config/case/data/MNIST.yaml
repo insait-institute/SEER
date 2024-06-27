@@ -1,0 +1,33 @@
+name: MNIST
+modality: vision
+task: classification
+
+path: "~/data"
+size: 50_000
+classes: 10
+shape:
+  - 1
+  - 28
+  - 28
+
+# Preprocessing
+normalize: True
+mean:
+  - 0.1307
+std:
+  - 0.3081
+# Data Augmentations
+augmentations_train:
+  RandomHorizontalFlip: 0.5
+augmentations_val:
+
+# Federated Learning specifics:
+default_clients: 10
+partition: balanced # used for synthetic splits. Current options for synthetic split: balanced / unique-class
+examples_from_split: validation
+
+# Data-specific implementation constants:
+batch_size: 128
+caching: False
+defaults:
+  - db: none # Database Setup # use the cmd-line to activate the LMDB module with data.db=LMDB
